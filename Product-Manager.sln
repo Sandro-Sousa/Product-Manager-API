@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductManager.API", "ProductManager.API", "{82F38EBF-992B-470F-A94D-8F75EF0CA5CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductManager.Entites", "ProductManager.Entites", "{46501A3E-EF30-4325-9FEB-A53DE406CD6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductManager.Infra", "ProductManager.Infra", "{6E39D153-AA4B-4506-87E3-A3C92D167148}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProductManager.Service", "ProductManager.Service", "{296B7A07-11C5-4EF0-9209-C195F04AC2B8}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6075684-90E3-41A9-8455-48547A780B13}
+	EndGlobalSection
+EndGlobal
