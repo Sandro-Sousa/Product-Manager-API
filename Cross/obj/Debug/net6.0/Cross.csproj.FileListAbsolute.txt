@@ -1,0 +1,13 @@
+D:\source\repos\Product-Manager\Cross\bin\Debug\net6.0\Cross.deps.json
+D:\source\repos\Product-Manager\Cross\bin\Debug\net6.0\Cross.dll
+D:\source\repos\Product-Manager\Cross\bin\Debug\net6.0\Cross.pdb
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.csproj.AssemblyReference.cache
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.AssemblyInfoInputs.cache
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.AssemblyInfo.cs
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.csproj.CoreCompileInputs.cache
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.sourcelink.json
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.dll
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\refint\Cross.dll
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\Cross.pdb
+D:\source\repos\Product-Manager\Cross\obj\Debug\net6.0\ref\Cross.dll
