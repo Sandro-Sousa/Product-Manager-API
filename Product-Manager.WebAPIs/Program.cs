@@ -9,14 +9,23 @@ builder.Services.AddSwaggerGen();
 builder.AddProductManagerContext();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll",
-               builder =>
-               {
-                   builder
-                       .AllowAnyOrigin()
-                       .AllowAnyHeader()
-                       .AllowAnyMethod();
-               });
+    options.AddPolicy("AllowAnyOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:3000")
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
 });
 
 var app = builder.Build();
@@ -31,6 +40,10 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors("CorsPolicy");
+
+app.UseCors("AllowSpecificOrigin");
 
 app.MapControllers();
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Cross.Pagination;
+using Microsoft.AspNetCore.Mvc;
 using Service.DTOs;
 using Service.Interfaces;
 using Swashbuckle.AspNetCore.Annotations;
@@ -14,6 +15,26 @@ namespace Product_Manager.WebAPIs.Controllers
         public ProductManagerController(IProductManagerService productManagerService)
         {
             this._productManagerService = productManagerService;
+        }
+
+
+        [HttpGet("v1/ProductManagerGetAllPagination")]
+        [SwaggerResponse(StatusCodes.Status200OK, "Success", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status204NoContent, "Incorrect Header Data", typeof(string))]
+        [SwaggerResponse(StatusCodes.Status500InternalServerError, "Server Error", typeof(string))]
+        public async Task<ActionResult<IEnumerable<CardDTO>>> ProductManagerGetAllPagination([FromQuery] ProductsParameters productsParameters)
+        {
+            try
+            {
+                var result = await this._productManagerService.GetAllProducts(productsParameters);
+                if (result == null) return this.StatusCode(StatusCodes.Status204NoContent);
+
+                return this.StatusCode(StatusCodes.Status200OK, result);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
         }
 
         [HttpGet("v1/productManagerGetAll")]

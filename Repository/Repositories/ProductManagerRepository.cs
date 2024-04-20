@@ -1,4 +1,5 @@
-﻿using Entities.Entites;
+﻿using Cross.Pagination;
+using Entities.Entites;
 using Microsoft.EntityFrameworkCore;
 using Repository.Commom;
 using Repository.Interfaces;
@@ -147,6 +148,15 @@ namespace Repository.Repositories
             {
                 throw;
             }
+        }
+
+        public async Task<IEnumerable<Card>> GetAllProducts(ProductsParameters productsParameters)
+        {
+            return (await GetAll())
+            .OrderBy(p => p.Id)
+            .Skip((productsParameters.PageNumber - 1) * productsParameters.PageSize)
+            .Take(productsParameters.PageSize)
+            .ToList();
         }
     }
 }

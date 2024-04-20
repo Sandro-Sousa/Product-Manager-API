@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Entities.Entites;
+using Microsoft.EntityFrameworkCore;
 using Repository.Commom;
 using Repository.Interfaces;
 using Repository.Repositories;
@@ -10,6 +11,7 @@ namespace Product_Manager.WebAPIs.Extensions
 {
     public static class DependencyContainer
     {
+   
         public static void AddProductManagerContext(this WebApplicationBuilder builder)
         {
             builder.Services.AddDbContext<ProductManagerDbContext>(opt =>

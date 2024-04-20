@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
+using Cross.Pagination;
 using Entities.Entites;
 using Repository.Interfaces;
 using Service.DTOs;
 using Service.Interfaces;
-
 
 namespace Service.Services
 {
@@ -98,6 +98,20 @@ namespace Service.Services
                 }
                 var cardResultDelete = await this._productManagerRepository.Delete(id);
                 return cardResultDelete;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<IEnumerable<CardDTO>> GetAllProducts(ProductsParameters productsParameters)
+        {
+            try
+            {
+                var cards = await _productManagerRepository.GetAllProducts(productsParameters);
+                var cardsDtos = this._mapper.Map<IEnumerable<CardDTO>>(cards);
+                return cardsDtos;
             }
             catch (Exception ex)
             {
