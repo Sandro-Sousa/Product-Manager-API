@@ -109,3 +109,4 @@ D:\source\repos\Product-Manager\Product-Manager.WebAPIs\obj\Release\net6.0\refin
 D:\source\repos\Product-Manager\Product-Manager.WebAPIs\obj\Release\net6.0\Product-Manager.WebAPIs.pdb
 D:\source\repos\Product-Manager\Product-Manager.WebAPIs\obj\Release\net6.0\Product-Manager.WebAPIs.genruntimeconfig.cache
 D:\source\repos\Product-Manager\Product-Manager.WebAPIs\obj\Release\net6.0\ref\Product-Manager.WebAPIs.dll
+D:\source\repos\Product-Manager\Product-Manager.WebAPIs\bin\Release\net6.0\web.config

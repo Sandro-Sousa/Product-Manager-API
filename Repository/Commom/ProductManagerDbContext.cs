@@ -1,5 +1,6 @@
 ﻿using Entities.Entites;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Repository.Commom
 {
@@ -24,7 +25,10 @@ namespace Repository.Commom
             if (!optionsBuilder.IsConfigured)
             {
                 var connectionString = Cross.AppSettings.GetConnectionString("DefaultConnection");
-                optionsBuilder.UseSqlServer(connectionString);
+                optionsBuilder.UseSqlServer(connectionString, options =>
+                {
+                    options.EnableRetryOnFailure();
+                }).LogTo(Console.WriteLine, LogLevel.Information);
             }
         }
     }

@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using Cross;
 using Cross.Pagination;
 using Entities.Entites;
+using Microsoft.IdentityModel.Tokens;
 using Repository.Interfaces;
 using Service.DTOs;
 using Service.Interfaces;
@@ -25,6 +27,13 @@ namespace Service.Services
                 var cards = await _productManagerRepository.GetAll();
 
                 var cardsDtos = this._mapper.Map<List<CardDTO>>(cards);
+
+                cardsDtos.ForEach(card =>
+                {
+                    var getImage = Cross.ImageHelper.GetImageAsBase64(card.Photo?.Base64);
+                    if(!string.IsNullOrEmpty(card.Photo?.Base64))
+                    card.Photo.Base64 = getImage;
+                });
 
                 return cardsDtos;
             }
@@ -56,27 +65,33 @@ namespace Service.Services
 
         public async Task<bool> Insert(CardDTOInsert cardDto)
         {
+            var imagePath = "";
+            if (!String.IsNullOrEmpty(cardDto.Photo?.Base64))
+            {
+                imagePath = ImageHelper.SaveImageFromBase64(cardDto.Photo.Base64);
+            }
+
             if (cardDto is null)
                 return await Task.FromResult(false);
 
-           var createCard = new Card
-           { 
+            var createCard = new Card
+            {
                 Name = cardDto.Name,
-                Photo = new Photo 
-                { 
-                    Base64 = cardDto.Photo?.Base64
+                Photo = new Photo
+                {
+                    Base64 = imagePath
                 },
                 Status = cardDto.Status,
-           };
+            };
 
-           await this._productManagerRepository.Create(createCard);
+            await this._productManagerRepository.Create(createCard);
 
             return await Task.FromResult(true);
         }
 
         public async Task<bool> Update(CardDTO cardUpdateDto)
         {
-            if(cardUpdateDto is null || cardUpdateDto.Id is 0)
+            if (cardUpdateDto is null || cardUpdateDto.Id is 0)
             {
                 throw new Exception("Card Not Found");
             }
@@ -111,6 +126,15 @@ namespace Service.Services
             {
                 var cards = await _productManagerRepository.GetAllProducts(productsParameters);
                 var cardsDtos = this._mapper.Map<IEnumerable<CardDTO>>(cards);
+
+                // Iterar sobre cada item na coleção e modificar a propriedade Photo.Base64
+                foreach (var card in cardsDtos)
+                {
+                    var getImage = Cross.ImageHelper.GetImageAsBase64(card.Photo?.Base64);
+                    if (!string.IsNullOrEmpty(card.Photo?.Base64))
+                        card.Photo.Base64 = getImage;
+                }
+
                 return cardsDtos;
             }
             catch (Exception ex)
@@ -118,5 +142,6 @@ namespace Service.Services
                 throw new Exception(ex.Message);
             }
         }
+
     }
 }

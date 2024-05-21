@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/cVVOo7KtjODG0BRMg0oeFjuPdDl19pd6urAfIyTiOJekibPixgXtpNbgLjw6BGCU1c5KxGt34SOUL9wBLcN/Q==",
+  "dgSpecHash": "X55KlItRqr4ZbziNNfhMLB5tvLWlsnEIp0987LbAtwV0B2d9FN8fwLEOPlvd62LulPliEX7wPfGJot34YBJj5A==",
   "success": true,
   "projectFilePath": "D:\\source\\repos\\Product-Manager\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
@@ -73,9 +73,9 @@
     "C:\\Users\\Sandr\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
     "C:\\Users\\Sandr\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Sandr\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.30\\microsoft.netcore.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.30\\microsoft.windowsdesktop.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.30\\microsoft.aspnetcore.app.ref.6.0.30.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "a6hpnq4iHe6H5B3UMxTRPcWR/jby19myW25OGRZs1auV8Jow57G77zm0p2sW8PDitBAMDwfvo9Iyrq7PIeOdmQ==",
+  "dgSpecHash": "SznWgTgz3+2vsjgyjyDlq5ZKv0NgLLU7QzotKLN8nLv+Nv0y0T6lq/pPWL4If7zOq+c2a8zNj1A9E8loscj4HA==",
   "success": true,
   "projectFilePath": "D:\\source\\repos\\Product-Manager\\Cross\\Cross.csproj",
   "expectedPackageFiles": [
@@ -17,9 +17,9 @@
     "C:\\Users\\Sandr\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Sandr\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\Sandr\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512",
-    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
-    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.30\\microsoft.netcore.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.30\\microsoft.windowsdesktop.app.ref.6.0.30.nupkg.sha512",
+    "C:\\Users\\Sandr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.30\\microsoft.aspnetcore.app.ref.6.0.30.nupkg.sha512"
   ],
   "logs": []
 }

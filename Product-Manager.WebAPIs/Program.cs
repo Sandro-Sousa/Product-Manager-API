@@ -7,6 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.AddProductManagerContext();
+builder.WebHost.UseIISIntegration();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAnyOrigin",

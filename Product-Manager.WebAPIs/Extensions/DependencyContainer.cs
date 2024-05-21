@@ -11,13 +11,14 @@ namespace Product_Manager.WebAPIs.Extensions
 {
     public static class DependencyContainer
     {
-   
+
         public static void AddProductManagerContext(this WebApplicationBuilder builder)
         {
             builder.Services.AddDbContext<ProductManagerDbContext>(opt =>
             {
                 var factory = new ProductManagerDbContextFactory();
-                opt.UseSqlServer(factory.CreateDbContext(Array.Empty<string>()).Database.GetDbConnection());
+                opt.UseSqlServer(factory.CreateDbContext(Array.Empty<string>()).Database.GetDbConnection(),
+                    options => options.EnableRetryOnFailure());
             });
 
             builder.Services.AddAutoMapper(typeof(ProductManagerProfile));
@@ -27,7 +28,6 @@ namespace Product_Manager.WebAPIs.Extensions
 
             // Services
             builder.Services.AddScoped<IProductManagerService, ProductManagerService>();
-
         }
     }
 }

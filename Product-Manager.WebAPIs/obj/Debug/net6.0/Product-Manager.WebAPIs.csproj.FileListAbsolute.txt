@@ -109,3 +109,4 @@ D:\source\repos\Product-Manager\Product-Manager.WebAPIs\bin\Debug\net6.0\Microso
 D:\source\repos\Product-Manager\Product-Manager.WebAPIs\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\source\repos\Product-Manager\Product-Manager.WebAPIs\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 D:\source\repos\Product-Manager\Product-Manager.WebAPIs\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
+D:\source\repos\Product-Manager\Product-Manager.WebAPIs\bin\Debug\net6.0\web.config
