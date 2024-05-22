@@ -24,7 +24,7 @@ namespace Repository.Repositories
                     Photo = x.Photo != null ? new Photo
                     {
                         Id = x.Photo.Id,
-                        Base64 = x.Photo.Base64
+                        UrlImage = x.Photo.UrlImage
                     } : null,
                     Name = x.Name,
                     Status = x.Status,
@@ -51,7 +51,7 @@ namespace Repository.Repositories
                    Photo = x.Photo != null ? new Photo
                    {
                        Id = x.Photo.Id,
-                       Base64 = x.Photo.Base64
+                       UrlImage = x.Photo.UrlImage
                    } : null,
                    Name = x.Name,
                    Status = x.Status,

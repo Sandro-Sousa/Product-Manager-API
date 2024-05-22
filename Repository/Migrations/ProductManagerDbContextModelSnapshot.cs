@@ -60,10 +60,10 @@ namespace Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Base64")
+                    b.Property<string>("UrlImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("base64");
+                        .HasColumnName("UrlImage");
 
                     b.HasKey("Id");
 

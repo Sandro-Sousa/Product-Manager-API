@@ -30,9 +30,9 @@ namespace Service.Services
 
                 cardsDtos.ForEach(card =>
                 {
-                    var getImage = Cross.ImageHelper.GetImageAsBase64(card.Photo?.Base64);
-                    if(!string.IsNullOrEmpty(card.Photo?.Base64))
-                    card.Photo.Base64 = getImage;
+                    var getImage = Cross.ImageHelper.GetImageAsBase64(card.Photo?.UrlImage);
+                    if(!string.IsNullOrEmpty(card.Photo?.UrlImage))
+                    card.Photo.UrlImage = getImage;
                 });
 
                 return cardsDtos;
@@ -79,7 +79,7 @@ namespace Service.Services
                 Name = cardDto.Name,
                 Photo = new Photo
                 {
-                    Base64 = imagePath
+                    UrlImage = imagePath
                 },
                 Status = cardDto.Status,
             };
@@ -127,12 +127,11 @@ namespace Service.Services
                 var cards = await _productManagerRepository.GetAllProducts(productsParameters);
                 var cardsDtos = this._mapper.Map<IEnumerable<CardDTO>>(cards);
 
-                // Iterar sobre cada item na coleção e modificar a propriedade Photo.Base64
                 foreach (var card in cardsDtos)
                 {
-                    var getImage = Cross.ImageHelper.GetImageAsBase64(card.Photo?.Base64);
-                    if (!string.IsNullOrEmpty(card.Photo?.Base64))
-                        card.Photo.Base64 = getImage;
+                    var getImage = Cross.ImageHelper.GetImageAsBase64(card.Photo?.UrlImage);
+                    if (!string.IsNullOrEmpty(card.Photo?.UrlImage))
+                        card.Photo.UrlImage = getImage;
                 }
 
                 return cardsDtos;

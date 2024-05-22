@@ -6,6 +6,6 @@ namespace Service.DTOs
     {
         public int Id { get; set; }
 
-        public string? Base64 { get; set; }
+        public string? UrlImage { get; set; }
     }
 }

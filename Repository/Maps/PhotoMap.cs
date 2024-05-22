@@ -12,7 +12,7 @@ namespace Repository.Maps
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Id).HasColumnName("id").ValueGeneratedOnAdd();
-            builder.Property(x => x.Base64).HasColumnName("base64").IsRequired();
+            builder.Property(x => x.UrlImage).HasColumnName("UrlImage").IsRequired();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Repository.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    base64 = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    UrlImage = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

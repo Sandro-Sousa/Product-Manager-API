@@ -11,7 +11,7 @@ using Repository.Commom;
 namespace Repository.Migrations
 {
     [DbContext(typeof(ProductManagerDbContext))]
-    [Migration("20240417051225_Init")]
+    [Migration("20240522124518_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -63,10 +63,10 @@ namespace Repository.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Base64")
+                    b.Property<string>("UrlImage")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("base64");
+                        .HasColumnName("UrlImage");
 
                     b.HasKey("Id");
 
